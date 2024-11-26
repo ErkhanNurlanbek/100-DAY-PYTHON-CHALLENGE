@@ -1,0 +1,6 @@
+# print(int('123') + int('7128'))
+#name = input('Enter your name: ')
+#length = len(name)
+# OPTION #1 == print("Number of letters in your name: " + f'{len(input("Enter your name"))}')
+# OPTION #2 == print("Number of letters in your name: " + str(length))
+print("Number of letters in your name: " + str(len(input("Enter your name"))))

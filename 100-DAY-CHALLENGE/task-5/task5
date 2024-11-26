@@ -1,0 +1,23 @@
+def right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+    
+while not at_goal():
+    if right_is_clear():
+        right()
+        move()
+    elif front_is_clear():
+        move()
+    else:
+        turn_left()
+
+P.S.
+I completed the task successfully, but instead of using PyCharm, I worked on the problem using a website called Reeborg’s World. This platform provides an interactive environment for solving programming challenges,
+but it doesn't generate standalone code that can be uploaded to GitHub.
+
+As a result, while I have a working solution in Reeborg’s World, I cannot provide a directly executable script here. If you'd like to see the solution, I can either share a summary of my approach or guide you through
+replicating it on Reeborg's World.
+The name of the challenge: Reeborg's World Maze Challenge
