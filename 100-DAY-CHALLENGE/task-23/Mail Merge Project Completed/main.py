@@ -14,4 +14,4 @@ with open("./Input/Letters/starting_letter.txt") as letter_file:
         with open(f"./Output/ReadyToSend/letter_for_{stripped_name}.txt", mode="w") as completed_letter:
             completed_letter.write(new_letter)
 
-print('Done! All letters are sent!')
+print('Done! All letters are ready to be sent!')
