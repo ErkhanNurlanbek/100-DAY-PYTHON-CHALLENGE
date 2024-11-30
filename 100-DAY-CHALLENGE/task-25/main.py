@@ -1,46 +1,32 @@
-#with open('weather_data.csv') as file:
-   # line0 = file.readlines(0)
-  #  for row in line0:
- #       print(row)
-
-#import csv
-
-#with open('weather_data.csv') as file:
-#   line = csv.reader(file)
-    #temperature = []
-   # for row in line:
-  #      if row[1] != 'temp':
- #           temperature.append(int(row[1]))
-#    print(temperature)
-
+import turtle
 import pandas
 
+screen = turtle.Screen()
+screen.title("U.S. States Game")
+image = "blank_states_img.gif"
+screen.addshape(image)
+turtle.shape(image)
 
-data = pandas.read_csv('weather_data.csv')
-temperature = data['temp'].to_list()
-print(temperature)
-print(data['temp'].mean())
-print(data['temp'].max())
-monday = data[data.day == 'Monday']
-print(data[data.temp == data.temp.max()])
-print(monday.temp * 1.8 + 32)
+data = pandas.read_csv("50_states.csv")
+all_states = data.state.to_list()
+guessed_states = []
 
-# create a data frame from scratch
-data_dict = {
-    'students': ['Amy', 'James', 'Angela'],
-    'Scores': [76, 56, 65]
-}
-data = pandas.DataFrame(data_dict)
-data.to_csv('new_data.csv')
-#n = 0
-#for i in temperature:
-  #  if i > n:
- #       n = i
-#print(n)
-#average = sum(temperature) / len(temperature)
-#print(average)
-
-#NOTE:
-#data.condition
-# ===============
-#data['condition']
+while len(guessed_states) < 50:
+    answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Correct",
+                                    prompt="What's another state's name?").title()
+    if answer_state == "Exit":
+        missing_states = []
+        for state in all_states:
+            if state not in guessed_states:
+                missing_states.append(state)
+        new_data = pandas.DataFrame(missing_states)
+        new_data.to_csv("states_to_learn.csv")
+        break
+    if answer_state in all_states:
+        guessed_states.append(answer_state)
+        t = turtle.Turtle()
+        t.hideturtle()
+        t.penup()
+        state_data = data[data.state == answer_state]
+        t.goto(state_data.x.item(), state_data.y.item())
+        t.write(answer_state)
