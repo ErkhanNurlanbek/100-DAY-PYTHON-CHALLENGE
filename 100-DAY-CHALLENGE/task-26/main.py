@@ -9,7 +9,7 @@
 #sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
 #result = {word:len(word) for word in sentence.split()}
 #print(result)
-import pandas
+
 
 #student_dict = {
   #  'student': ['Angela', 'James', 'Lily'],
@@ -25,6 +25,7 @@ import pandas
 #for (index, row) in student_data_frame.iterrows():
  #   if row.score <= 50:
 #        print(f'{row.student} failed')
+import pandas
 
 data = pandas.read_csv('nato_phonetic_alphabet.csv')
 nato_dict = data.to_dict()
