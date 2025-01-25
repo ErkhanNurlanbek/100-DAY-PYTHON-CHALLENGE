@@ -7,9 +7,9 @@ MY_LAT = 42.829939
 MY_LNG = 74.583855
 
 OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
-api_key = os.environ.get("0570af38bd0cebcaaccbc682fe365967")
-account_sid = "3rajeif23k3j42kjn2ih23hh2h3hi2342h4hi2"
-auth_token = os.environ.get("234kj2kj2kjihg2v2yggjnmcc2223ctx")
+api_key = os.environ.get("MY_KEY")
+account_sid = "MY_SID"
+auth_token = os.environ.get("MY_AUTH_TOKEN")
 
 weather_params = {
     "lat": MY_LAT,
