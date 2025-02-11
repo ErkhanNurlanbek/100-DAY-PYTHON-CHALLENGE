@@ -73,7 +73,7 @@ while True:
 
             # Process payment
             price = cost_of_drink(cust_inp)
-            success, _ = process_payment(price)
+            success = process_payment(price)
 
             if success:
                 # Deduct ingredients
