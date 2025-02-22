@@ -7,10 +7,9 @@ from bs4 import BeautifulSoup
 
 user_inp = input("Which year do you want to travel to? Type the date in this format YYYY-MM-DD: ")
 year = user_inp.split('-')[0]
-CLIENT_ID = 'ba7e9317a49444c08ac7a59608ae81fb'
-CLIENT_SECRET = 'abb7ccb4b4cd453cad227d66f41be2ca'
-ACCESS_TOKEN = {"access_token": "BQBc4NX0HeMV4M9C7uZTmS3wPlqQIwaGHoB-LF8_Gtq1bBSnC26wshhggFNZhVcCSrpknev45IS2lo8D1KAsnODd7UEL9wyqSpijnc3Gx1jeYZyPAcOlQuuhf7UNkTnhXk4u36vpZ-JG0tyZoLxDid--cnEpW6ZR0qxpbTOwexI8wNDzv-cfzQuZTbPj1-_k7wwdrt9JXasHR9orogvhwtyzmfICgs1efLg9LmbbC5cEPVuTB2BkC4UsgnwPYYqlNHXG3w", "token_type": "Bearer", "expires_in": 3600, "refresh_token": "AQAfLkxhCWlYcH2w--oIEXKd_7XD5wIHZhKvLbGkn0EWIym65crjiIclxWTZIWQPM5eSz0C-Gq6gc94Dzu7b0IAT6IxA1D7IxBVcePvyi-wzS9pCPJsQgVQVtJ1_G7q5UqU", "scope": "playlist-modify-private", "expires_at": 1740158500}
-
+CLIENT_ID = 'CLIENT_ID'
+CLIENT_SECRET = 'MY_CLIENT_SECRET'
+ACCESS_TOKEN = 'MY_ACCESS_TOKEN'
 
 header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"}
 
@@ -31,12 +30,10 @@ song_uris = [v.getText().strip() for v in l]
 #         client_secret=CLIENT_SECRET,
 #         show_dialog=True,
 #         cache_path='token.txt',
-#         username='313qyl22wkb3vpcyixwphyxrb7l4'
 #     )
 # )
 # user_id = sp.current_user()['id']
 #
-# 'AQAYHpHeAiPAhyzH9FOb4zwzjJswmgp6wt0yeOEPNSRipf1ftZG3TH1oZkL2o3FMbEh5fmwls03nMpDoxf4cf5YVOye5sfJ0_RqZg6WsOJeh90b4AsRP1l0Awibo9rj7npkpof1aEwJ7bh1IB3YMy8cfPyRMxT72Gvc'
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
