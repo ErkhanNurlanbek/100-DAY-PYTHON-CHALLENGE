@@ -48,5 +48,5 @@ if price < BUY_PRICE:
         connection.sendmail(
             from_addr='randomemail@gmail.com',
             to_addrs='randomemail@gmail.com',
-            msg=f"Subject:Amazon Price Alert!\n\n{message}\n{'https://appbrewery.github.io/instant_pot/'}".encode("utf-8")
+            msg=f"Subject:Amazon Price Alert!\n\n{message}\n{'https://www.amazon.com/dp/B075CYMYK6?ref_=cm_sw_r_cp_ud_ct_FM9M699VKHTT47YD50Q6&th=1'}".encode("utf-8")
         )
