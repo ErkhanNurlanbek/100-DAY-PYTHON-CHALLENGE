@@ -21,13 +21,13 @@ every_item = []
 for item in items:
     every_item.append(item.get_attribute('id').strip())
 
-cps = driver.find_element(By.ID, value='cps').text
 
 
 timeout = time.time() + 5
 fiv_min = time.time() + 60 * 5
 while True:
     cookie.click()
+    cps = driver.find_element(By.ID, value='cps').text
     if time.time() > fiv_min:
         print(cps)
         break
