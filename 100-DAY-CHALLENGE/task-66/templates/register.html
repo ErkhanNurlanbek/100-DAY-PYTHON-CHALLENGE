@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+
 <div class="box">
 	<h1>Register</h1>
     <form action="{{ url_for('register') }}" method="post">
@@ -10,5 +11,6 @@
         <button type="submit" class="btn btn-primary btn-block btn-large">Sign me up.</button>
     </form>
 </div>
+
 
 {% endblock %}
